@@ -15,6 +15,7 @@
 		F6B1DE531F382B3600619652 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B1DE521F382B3600619652 /* SWRevealViewController.m */; };
 		F6B1DE581F39597700619652 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1DE571F39597700619652 /* ChatVC.swift */; };
 		F6B1DE5A1F39598700619652 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1DE591F39598700619652 /* ChannelVC.swift */; };
+		F6B1DE5C1F3965D000619652 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1DE5B1F3965D000619652 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F6B1DE521F382B3600619652 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		F6B1DE571F39597700619652 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F6B1DE591F39598700619652 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		F6B1DE5B1F3965D000619652 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		F6B1DE551F39595000619652 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6B1DE5B1F3965D000619652 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				F6B1DE5A1F39598700619652 /* ChannelVC.swift in Sources */,
 				F6B1DE581F39597700619652 /* ChatVC.swift in Sources */,
+				F6B1DE5C1F3965D000619652 /* GradientView.swift in Sources */,
 				F65924BE1F3822ED00A263AD /* AppDelegate.swift in Sources */,
 				F6B1DE531F382B3600619652 /* SWRevealViewController.m in Sources */,
 			);
