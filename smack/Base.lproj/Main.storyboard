@@ -562,8 +562,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="awgmwntControl" destination="pDQ-7g-9Fz" id="6om-gj-G76"/>
                         <outlet property="collectionView" destination="Hee-gp-uYb" id="ujy-Tw-17m"/>
+                        <outlet property="segmentControl" destination="pDQ-7g-9Fz" id="9FC-W1-2Qh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LC-Qe-aHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
