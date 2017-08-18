@@ -22,6 +22,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        SocketService.instance.getChannel { (sucess) in
+            if sucess {
+                self.tableView.reloadData()
+            }
+        }
     }
   
     override func viewDidAppear(_ animated: Bool) {
