@@ -11,10 +11,9 @@ import UIKit
 class ChatVC: UIViewController {
 
     //Outlets
-    
     @IBOutlet weak var menuBtn: UIButton!
-    
     @IBOutlet weak var channelNameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
@@ -30,8 +29,6 @@ class ChatVC: UIViewController {
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             })
         }
-        
-      
 
     }
 
@@ -52,13 +49,27 @@ class ChatVC: UIViewController {
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.name ?? ""
         channelNameLbl.text = "#\(channelName)"
+        getMessages()
     }
     
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
             if success {
-                //Do stuff with channles
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLbl.text = "No channels yet!"
+                }
+                
             }
+        }
+    }
+    
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?._id else {return}
+        MessageService.instance.findAllMessagesForChannel(channeldId: channelId) { (sucess) in
+            
         }
     }
     
