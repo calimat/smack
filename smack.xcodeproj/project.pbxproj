@@ -23,6 +23,7 @@
 		F6332E131F453D3D005C76A4 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6332E111F453D3D005C76A4 /* AddChannelVC.xib */; };
 		F6332E151F467304005C76A4 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6332E141F467304005C76A4 /* SocketService.swift */; };
 		F6332E171F47C7C4005C76A4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6332E161F47C7C4005C76A4 /* Message.swift */; };
+		F6332E191F47CECC005C76A4 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6332E181F47CECC005C76A4 /* KeyboardBoundView.swift */; };
 		F65924BE1F3822ED00A263AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65924BD1F3822ED00A263AD /* AppDelegate.swift */; };
 		F65924C31F3822ED00A263AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65924C11F3822ED00A263AD /* Main.storyboard */; };
 		F65924C51F3822ED00A263AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65924C41F3822ED00A263AD /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		F6332E111F453D3D005C76A4 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		F6332E141F467304005C76A4 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		F6332E161F47C7C4005C76A4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F6332E181F47CECC005C76A4 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = "../../../../../Downloads/Smack Assets/KeyboardBind View/KeyboardBoundView.swift"; sourceTree = "<group>"; };
 		F65924BA1F3822ED00A263AD /* smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65924BD1F3822ED00A263AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F65924C21F3822ED00A263AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B1DE5B1F3965D000619652 /* GradientView.swift */,
+				F6332E181F47CECC005C76A4 /* KeyboardBoundView.swift */,
 				F6332DF71F3C045B005C76A4 /* RoundedButton.swift */,
 				F6332DFD1F4148CB005C76A4 /* AvatarCell.swift */,
 				F6332DFF1F4299DC005C76A4 /* CircleImage.swift */,
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6332E191F47CECC005C76A4 /* KeyboardBoundView.swift in Sources */,
 				F6332E151F467304005C76A4 /* SocketService.swift in Sources */,
 				F6332E031F43CE53005C76A4 /* ProfileVC.swift in Sources */,
 				F6332E0B1F4538DF005C76A4 /* ChannelCell.swift in Sources */,
