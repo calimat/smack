@@ -5,7 +5,7 @@
 //  Created by Ricardo Herrera Petit on 8/10/17.
 //  Copyright © 2017 Ricardo Herrera Petit. All rights reserved.
 //
-
+import Alamofire
 import Foundation
 
 class UserDataService {
@@ -27,6 +27,10 @@ class UserDataService {
     
     func setAvatarName(avatarName:String) {
         self.avatarName = avatarName
+    }
+    
+    func setUserName(userName:String) {
+        self.name = userName
     }
     
     func returnUIColor(components: String) -> UIColor {
@@ -59,6 +63,34 @@ class UserDataService {
         
         return newUIColor
     
+    }
+    
+    func changeUserName(userId: String, newUsername: String, completion: @escaping CompletionHandler) {
+        
+        let user = UserDataService.instance
+       
+        
+        let body: [String: Any] = [
+            "name": newUsername,
+            "email":user.email,
+            "avatarName": user.avatarName,
+            "avatarColor": user.avatarColor
+        ]
+        
+        
+        
+        Alamofire.request("\(URL_CHANGE_USERNAME)\(userId)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString { (response) in
+            
+            if response.result.error == nil {
+              
+                self.setUserData(id: user.id, color: user.avatarColor, avatarName: user.avatarName, email: user.email, name: newUsername)
+                
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
     }
     
     func logoutUser() {

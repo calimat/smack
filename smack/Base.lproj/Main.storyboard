@@ -687,6 +687,7 @@
                             <constraint firstItem="pDQ-7g-9Fz" firstAttribute="centerX" secondItem="X54-Qz-r4q" secondAttribute="centerX" id="OXf-dw-xfb"/>
                             <constraint firstItem="zen-e1-BzS" firstAttribute="top" secondItem="X54-Qz-r4q" secondAttribute="topMargin" constant="8" id="PBf-dK-XbA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="qVX-XX-Di6"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Hee-gp-uYb" id="ujy-Tw-17m"/>

@@ -18,6 +18,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var userEmail: UILabel!
     
+    @IBOutlet weak var changeUserNameLbl: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -48,4 +50,21 @@ class ProfileVC: UIViewController {
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func changeUserNamePressed(_ sender: Any) {
+        guard let newUsername =  changeUserNameLbl.text , changeUserNameLbl.text != "" else { return }
+        let userId = UserDataService.instance.id
+        
+        if AuthService.instance.isLoggedIn {
+            UserDataService.instance.changeUserName(userId: userId, newUsername: newUsername) { (success) in
+                if(success) {
+                    NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                    self.setUpView()
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+      
+    }
+    
 }
